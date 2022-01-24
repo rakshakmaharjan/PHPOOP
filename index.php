@@ -20,10 +20,10 @@
                 <input type="email" class="form-control" id="email" placeholder="Enter Email">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="repassword" placeholder="Enter Password Again">
+                <input type="password" class="form-control" id="repwd" placeholder="Enter Password Again">
             </div>
             <button type="submit" class="btn btn-primary">Sign Up</button>
         </form>
@@ -36,7 +36,7 @@
                 <input type="text" class="form-control" id="username" placeholder="Enter Username">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>

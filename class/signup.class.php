@@ -19,10 +19,10 @@ class Signup extends Db{
         return $resultCheck;
     }
 
-    protected function setUser($username, $password, $email){
-        $stmt = $this->connect()->prepare('INSERT INTO users (username, email, password) VALUES (?,?,?);');
+    protected function setUser($username, $pwd, $email){
+        $stmt = $this->connect()->prepare('INSERT INTO users (username, email, pwd) VALUES (?,?,?);');
         
-        $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
+        $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
         
         if(!$stmt->execute(array($username, $email, $hashedpwd))){
             $stmt = null;

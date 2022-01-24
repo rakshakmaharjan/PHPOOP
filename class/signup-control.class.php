@@ -3,15 +3,15 @@
 class SignupContr extends Signup{
     private $username;
     private $email;
-    private $password;
-    private $repassword;
+    private $pwd;
+    private $repwd;
 
     //constructor
-    public function __construct($username, $email, $password, $repassword){
+    public function __construct($username, $email, $pwd, $repwd){
         $this->username = $username;
         $this->email = $email;
-        $this->password = $password;
-        $this->repassword = $repassword;
+        $this->pwd = $pwd;
+        $this->repwd = $repwd;
     }
 
     public function signupUser(){
@@ -40,13 +40,13 @@ class SignupContr extends Signup{
             header("location: ../index.php?error=userExists");
             exit();
         }
-        $this->setUser($this->username, $this->password, $this->email);
+        $this->setUser($this->username, $this->pwd, $this->email);
     }
 
     //error handlers
     private function emptyInput(){
         $result;
-        if(empty($this->username) || empty($this->email) || empty($this->password) || empty($this->repassword)){
+        if(empty($this->username) || empty($this->email) || empty($this->pwd) || empty($this->repwd)){
             $result = false;
         }
         else{
@@ -79,7 +79,7 @@ class SignupContr extends Signup{
 
     private function passwordMatch(){
         $result;
-        if($this->password !== $this->repassword){
+        if($this->pwd !== $this->repwd){
             $result = false;
         }
         else{
